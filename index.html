@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom overrides -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Characterizing the VPN Ecosystem in the Wild</title>
+</head>
+
+
+<body>
+    <!-- Put nav into container to center it on the page -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <!--	            <a class="navbar-brand" href="#">↑</a>-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav container">
+                    <ul class="navbar-nav justify-content-between w-100">
+                        <li><a class="nav-item nav-link" href="#home">↑</a></li>
+                        <li><a class="nav-item nav-link" href="#paper">Paper</a></li>
+                        <li><a class="nav-item nav-link" href="#tool">VPN scan modules</a></li>
+                        <li><a class="nav-item nav-link" href="#reproduc">Reproducibility</a></li>
+                        <li><a class="nav-item nav-link" href="#partners">Partners</a></li>
+                        <li><a class="nav-item nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div id="home" style="padding-top: 3em">
+            <h1>Characterizing the VPN Ecosystem in the Wild</h1>
+
+            <article class="px-4 py-2 row">
+
+            <div class="more-pad">
+                <p>On this website we present our paper <a href="#paper"><em>Characterizing the VPN Ecosystem in the Wild</em></a> published at the <a href="https://pam2023.networks.imdea.org/">Passive and Active Measurement Conference 2023</a> and our custom <a href="#tool">VPN scan modules</a>.</p>
+            </div>
+
+            </article>
+
+        </div>
+
+
+        <div id="paper">
+
+            <h2>Paper</h2>
+
+            <article class="px-4 py-2 row">
+                <a href="maghsoudlou2023characterizing.pdf" class="paper-screenshot-link col-12 col-md-4">
+                    <img src="maghsoudlou2023characterizing.jpg" class="img-fluid img-thumbnail paper-screenshot" alt="Exploring the Cookieverse: A Multi-Perspective Analysis of Web Cookies" width="800" height="1071"></a>
+                <div class="col-12 col-md-8">
+                    <p><b>Abstract.</b>
+                    With the increase of remote working during and after the COVID-19 pandemic, the use of Virtual Private Networks (VPNs) around the world has nearly doubled. Therefore, measuring the traffic and security aspects of the VPN ecosystem is more important now than ever. VPN users rely on the security of VPN solutions, to protect private and corporate communication. Thus a good understanding of the security state of VPN servers is crucial. Moreover, properly detecting and characterizing VPN traffic remains challenging, since some VPN protocols use the same port number as web traffic and port-based traffic classification will not help.
+                    In this paper, we aim at detecting and characterizing VPN servers in the wild, which facilitates detecting the VPN traffic. To this end, we perform Internet-wide active measurements to find VPN servers in the wild, and analyze their cryptographic certificates, vulnerabilities, locations, and fingerprints. We find 9.8M VPN servers distributed around the world using OpenVPN, SSTP, PPTP, and IPsec, and analyze their vulnerability. We find SSTP to be the most vulnerable protocol with more than 90% of detected servers being vulnerable to TLS downgrade attacks. Out of all the servers that respond to our VPN probes, 2% also respond to HTTP probes and therefore are classified as Web servers. Finally, we use our list of VPN servers to identify VPN traffic in a large European ISP and observe that 2.6% of all traffic is related to these VPN servers.</p>
+                    <p><b>Authors.</b> <a href="https://www.mpi-inf.mpg.de/inet/people/aniss-maghsoudlou/">Aniss Maghsoudlou</a>, Lukas Vermeulen, <a href="https://www.benocs.com/">Ingmar Poese</a>, and <a href="https://olivergasser.net/">Oliver Gasser</a>.</p>
+                    <div class="row row-cols-auto paper-buttons"><a href="maghsoudlou2023characterizing.pdf" class="btn btn-primary col paper-button">Download paper</a>
+                        <a href="maghsoudlou2023characterizing.bib" class="btn btn-outline-secondary col paper-button">Bibtex</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+
+        <div id="tool">
+
+            <h2>VPN scan modules</h2>
+
+            <article class="px-4 py-2 row">
+
+                <p>We developed custom <a href="https://github.com/zmap/zgrab2">ZGrab2</a> modules to allow scanning of the following VPN protocols: TODO, TODO, and TODO. We publish our <a href="https://github.com/vpnecosystem/vpn-scan-modules">custom VPN scan modules on GitHub</a> for fellow researchers.</p>
+
+            </article>
+
+        </div>
+
+
+        <div id="reproduc">
+            <h2>Reproducibility</h2>
+
+            <article class="px-4 py-2 row">
+                <p>We publish data and scripts to reproduce our analysis at the
+                    <a href="https://doi.org/10.17617/3.NZUPN4">Open Research Data Repository of the Max Planck Society</a> to guarantee long-term availability.
+                </p>
+
+                <p><b>Dataset DOI.</b> <a href="https://doi.org/10.17617/3.NZUPN4">10.17617/3.NZUPN4</a></p>
+            </article>
+        </div>
+
+        <div id="partners">
+            <h2>Partners</h2>
+
+            <article class="px-4 py-2 row">
+            <div class="row align-items-center">
+                <div class="col-md-6 ml-auto my-3 logo-container">
+                    <a href="https://www.mpi-inf.mpg.de" class="a-img"><img src="logos/mpilogo-inf-narrow.png" alt="MPI for Informatics logo" class="img-fluid logo" /></a>
+                </div>
+                <div class="col-md-6 mx-auto my-3 logo-container">
+                    <a href="https://www.benocs.com/" class="a-img"><img src="logos/cropped-BENOCS_logo-2022.png" alt="BENOCS logo" class="img-fluid logo" /></a>
+                </div>
+            </div>
+            </article>
+        </div>
+
+        <div id="contact">
+
+            <h2>Contact</h2>
+
+            <article class="px-4 py-2 row">
+
+                <p>You can contact us at <a href="mailto:vpnecosystem@mpi-inf.mpg.de">vpnecosystem@mpi-inf.mpg.de</a>.</p>
+
+            </article>
+        </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- JS STARTS HERE -->
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS - necessary for expanding the navbar menu -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Hide navbar on click -->
+    <script>
+        $('.nav-item').on('click', function() {
+            $('.navbar-collapse').collapse('hide');
+        });
+
+    </script>
+    <!-- JS ENDS HERE -->
+
+</body>
+
+</html>
