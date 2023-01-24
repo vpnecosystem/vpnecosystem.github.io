@@ -5,6 +5,7 @@ html {
 body {
     font-family: "Computer Modern Sans", serif;
     font-size: 110% !important;
+    padding-bottom: 4em;
 }
 
 h1,
