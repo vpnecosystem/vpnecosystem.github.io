@@ -128,20 +128,27 @@
 
 
     <!-- JS STARTS HERE -->
-    <!-- jQuery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-
     <!-- Bootstrap JS - necessary for expanding the navbar menu -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Hide navbar on click -->
     <script>
-        $('.nav-item').on('click', function() {
-            $('.navbar-collapse').collapse('hide');
-        });
+        function close_navbar() {
+            document.getElementById("navbarNavAltMarkup").classList.toggle("show");
+        }
 
+        const collection = document.getElementsByClassName("nav-item");
+        for (let i = 0; i < collection.length; i++) {
+            var curr = collection[i];
+            if (curr.addEventListener) {
+                curr.addEventListener('click', close_navbar, false);
+            } else if (curr.attachEvent) { // IE fallback
+                curr.attachEvent('onclick', function(){ return close_navbar.apply(curr, [window.event])});
+            }
+        }
     </script>
     <!-- JS ENDS HERE -->
+
 
 </body>
 
